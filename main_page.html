@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>model urus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    
+}
+footer{
+  padding: 20px;
+  background-color: #333; 
+  color: white;
+}
+#center{
+  text-align: center;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px;
+    position: relative;
+}
+nav ul li a::after {
+content: '';
+background: rgb(255, 255, 255);
+width: 0;
+height: 2px;
+position: absolute;
+bottom: 0;
+left:0;
+transition: width 0.5s;
+}
+nav ul li a:hover::after{
+    width : 100%;
+}
+
+body{
+  padding: 10px;
+}
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(151, 151, 151, 0.8);
+}
+
+.numbertext {
+  color: #000000;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>MODEL URUS</h1>
+        <nav>
+          <ul>
+              <li><a href="#model">Models</a></li>
+          </ul>
+      </nav>
+    </header>
+<p><p id="center"><a href="https://www.lamborghini.com/en-en/models/urus" target="_blank"><img src="urus logo.jpg"  ></a></p><br><b> Urus is the first Super Sport Utility Vehicle in the world, merging the soul of a super sports car with the practical 
+  functionality of an SUV. Powered by Lamborghini’s 4.0-liter twin-turbo V8 engine, the Urus is all about a 
+  performance mindset that brings together fun-to-drive and astounding vehicle capabilities. The design, 
+  performance, driving dynamics and unbridled emotion flow effortlessly into this visionary realization of 
+  authentic Lamborghini DNA.</b></p>
+<img src="design final.jpg" width="100%">
+<h2 id="center">Select your URUS<br></h2>
+<div class="slideshow-container">
+<section id="model">
+<div class="mySlides fade">
+  <div class="numbertext">1 / 2</div>
+  <a href="model 1 URUS S.html" target="_blank"><img src="main page urus s.jpg" style="width:100%"></a>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 2</div>
+  <a href="model 2 URUS performante.html" target="_blank"><img src="main page urus perf.jpg" style="width:100%"></a>
+</div>
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+</section>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html> 
